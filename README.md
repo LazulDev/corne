@@ -29,6 +29,16 @@ The firmware is built automatically via GitHub Actions on push. Download the `.u
 
 Flash order for pairing: right half first, then left half.
 
+### Local Build
+
+Requires Docker. Run:
+
+```bash
+./build.sh
+```
+
+The `.uf2` files will be generated in `./firmware/`.
+
 ### Settings Reset
 
 Flash `settings_reset.uf2` to clear Bluetooth pairings and stored config. Re-flash the normal firmware afterwards.
