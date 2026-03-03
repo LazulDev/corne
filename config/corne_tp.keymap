@@ -31,7 +31,7 @@
     &kp TAB     &kp A       &kp S       &kp D       &kp F       &kp G          &kp H       &kp J       &kp K       &kp L       &kp SEMI    &kp SQT
     &kp LSHIFT  &kp Z       &kp X       &kp C       &kp V       &kp B          &kp N       &kp M       &kp COMMA   &kp DOT     &kp FSLH    &kp RSHFT
 // ╰───────────┴───────────┴───────────┤                                                                           ├───────────┴───────────┴───────────╯
-                                         &mkp RCLK  &mt LCTRL RETURN &mo 1     &kp BACKSPACE &lt HOTKEY SPACE  &mkp LCLK
+                                         &mkp RCLK  &mt LCTRL RETURN &mo 1     &kp BACKSPACE &mo HOTKEY       &mkp LCLK
 //                                      ╰───────────┴───────────┴───────────╯   ╰───────────┴───────────┴───────────╯
             >;
         };
