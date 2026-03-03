@@ -31,7 +31,7 @@
     &kp TAB     &kp A       &kp S       &kp D       &kp F       &kp G          &kp H       &kp J       &kp K       &kp L       &kp SEMI    &kp SQT
     &kp LSHIFT  &kp Z       &kp X       &kp C       &kp V       &kp B          &kp N       &kp M       &kp COMMA   &kp DOT     &kp FSLH    &kp RSHFT
 // ╰───────────┴───────────┴───────────┤                                                                           ├───────────┴───────────┴───────────╯
-                                         &mkp RCLK  &mt LCTRL RETURN &mo 1     &kp BACKSPACE &kp SPACE  &mkp LCLK
+                                         &mkp RCLK  &mt LCTRL RETURN &mo 1     &kp BACKSPACE &lt HOTKEY SPACE  &mkp LCLK
 //                                      ╰───────────┴───────────┴───────────╯   ╰───────────┴───────────┴───────────╯
             >;
         };
@@ -63,7 +63,7 @@
         settings_layer {
             bindings = <
 // ╭───────────┬───────────┬───────────┬───────────┬───────────┬───────────╮   ╭───────────┬───────────┬───────────┬───────────┬───────────┬───────────╮
-    &out OUT_TOG ___        ___         ___         ___         ___             &kp N6      &kp N7      &kp N8      &kp N9      &kp N0      &soft_off
+    &out OUT_TOG ___        ___         ___         ___         ___             &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &soft_off
     ___         ___         ___         ___         ___         ___             ___         &kp N4      &kp N5      &kp N6      ___         ___
     ___         &bt BT_CLR  ___         ___         ___         ___             ___         &kp N1      &kp N2      &kp N3      ___         ___
 // ╰───────────┴───────────┴───────────┤                                                                           ├───────────┴───────────┴───────────╯
