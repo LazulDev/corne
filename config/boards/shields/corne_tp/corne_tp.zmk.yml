@@ -1,8 +1,7 @@
 file_format: "1"
-id: sofle
-name: Sofle
+id: corne_tp
+name: Corne TP
 type: shield
-url: https://github.com/josefadamcik/SofleKeyboard
 requires: [pro_micro]
 exposes: [i2c_oled]
 features:
@@ -10,5 +9,5 @@ features:
   - display
   - studio
 siblings:
-  - sofle_left
-  - sofle_right
+  - corne_tp_left
+  - corne_tp_right
