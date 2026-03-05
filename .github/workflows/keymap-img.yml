@@ -1,0 +1,99 @@
+name: 🎨 Generate Keymap Image
+
+on:
+  pull_request:
+    paths:
+      - "config/*.keymap"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  generate-keymap:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Go
+        uses: actions/setup-go@v4
+        with:
+          go-version: "1.21"
+
+      - name: Install zmk-viewer
+        run: go install github.com/mrmarble/zmk-viewer/cmd/zmk-viewer@latest
+
+      - name: Create output directory
+        run: mkdir -p keymap-images
+
+      - name: Generate keymap images
+        run: |
+          for keymap_file in config/*.keymap; do
+            if [ -f "$keymap_file" ]; then
+              filename=$(basename "$keymap_file")
+              echo "🔧 Generating visualization for: $filename"
+              
+              zmk-viewer generate \
+                --file "$keymap_file" \
+                --output keymap-images \
+                corne
+            fi
+          done
+
+      - name: Verify images generated
+        id: verify
+        run: |
+          IMAGE_COUNT=$(find keymap-images -name "*.png" 2>/dev/null | wc -l)
+          echo "count=$IMAGE_COUNT" >> $GITHUB_OUTPUT
+          if [ $IMAGE_COUNT -gt 0 ]; then
+            echo "✅ Generated $IMAGE_COUNT image(s)"
+            find keymap-images -name "*.png" -exec echo "  - {}" \;
+          else
+            echo "⚠️ No images generated"
+          fi
+
+      - name: Commit images
+        if: steps.verify.outputs.count > 0
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "docs: update keymap visualization"
+          file_pattern: "keymap-images/**/*.png"
+          commit_options: "--no-verify"
+
+      - name: Comment on PR with preview
+        if: github.event_name == 'pull_request' && steps.verify.outputs.count > 0
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+
+            try {
+              const files = fs.readdirSync('keymap-images').filter(f => f.endsWith('.png'));
+              
+              if (files.length > 0) {
+                let comment = '## 🎮 Keymap Preview\n\n';
+                files.forEach(file => {
+                  comment += `![${file}](keymap-images/${file})\n\n`;
+                });
+                
+                github.rest.issues.createComment({
+                  issue_number: context.issue.number,
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  body: comment
+                });
+              }
+            } catch (e) {
+              console.log('Could not create comment:', e);
+            }
+
+      - name: 📊 Summary
+        if: always()
+        run: |
+          echo "## 📊 Execution Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Trigger:** ${{ github.event_name }}" >> $GITHUB_STEP_SUMMARY
+          echo "**Images generated:** ${{ steps.verify.outputs.count }}" >> $GITHUB_STEP_SUMMARY
