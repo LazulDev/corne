@@ -39,7 +39,7 @@ jobs:
               zmk-viewer generate \
                 --file "$keymap_file" \
                 --output keymap-images \
-                corne_6col
+                splitkb/aurora/corne/rev1
             fi
           done
 
