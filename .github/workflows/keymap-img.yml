@@ -39,7 +39,7 @@ jobs:
               zmk-viewer generate \
                 --file "$keymap_file" \
                 --output keymap-images \
-                corne
+                corne_6col
             fi
           done
 
