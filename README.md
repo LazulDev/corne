@@ -10,12 +10,25 @@ Custom ZMK firmware for a Corne 42-key split keyboard with trackpad.
 - **Left half**: OLED display (SSD1306, 128x32, I2C)
 - **Right half**: Trackpad Azoteq ProxSense TPS43 (IQS5xx, I2C)
 
-## Layers
+## Keymap Layout
 
-- **0 - DEFAULT**: QWERTY base layer
-- **1 - NUMBER**: Numbers and symbols
-- **2 - FN**: Function / numpad
-- **3 - HOTKEY**: Settings, BT, soft off
+Check [Keymap documentation](./config/KEYMAP.md) for detailed info.
+
+<picture>
+  <img alt="TODO" src="./assets/imgs/0 base layer.png">
+</picture>
+
+<picture>
+  <img alt="TODO" src="./assets/imgs/1 sym layer.png">
+</picture>
+
+<picture>
+  <img alt="TODO" src="./assets/imgs/2 numav layer.png">
+</picture>
+
+<picture>
+  <img alt="TODO" src="./assets/imgs/3 sys layer.png">
+</picture>
 
 ## Build
 
@@ -30,8 +43,6 @@ The `.uf2` files will be generated in `./firmware/`.
 3. Drag the corresponding `.uf2` file to the drive
 
 Flash order for pairing: right half first, then left half.
-
-
 
 ### Settings Reset
 
