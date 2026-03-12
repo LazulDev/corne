@@ -1,9 +1,6 @@
-name: 🎨 Generate Keymap Image
+name: 🎨 generate Keymap Image
 
 on:
-  pull_request:
-    paths:
-      - "config/*.keymap"
   workflow_dispatch:
 
 permissions:
