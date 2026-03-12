@@ -1,0 +1,68 @@
+{
+  "skill_name": "keymap-editor",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Swap the Q and W keys on the base layer",
+      "expected_output": "Positions 1 and 2 on default_layer are exchanged: &kp W at pos 1, &kp Q at pos 2",
+      "assertions": [
+        "config/corne_tp.keymap is modified",
+        "default_layer row 0 now has &kp W before &kp Q",
+        "All other bindings in default_layer are unchanged",
+        "Layer still has exactly 42 bindings"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Add home row mods with GACS order to the default layer",
+      "expected_output": "Home row keys A/S/D/F and J/K/L/; are wrapped in &mt with GUI/ALT/CTRL/SHIFT modifiers",
+      "assertions": [
+        "Position 13 is &mt LGUI A",
+        "Position 14 is &mt LALT S",
+        "Position 15 is &mt LCTRL D",
+        "Position 16 is &mt LSHFT F",
+        "Position 19 is &mt RSHFT J",
+        "Position 20 is &mt RCTRL K",
+        "Position 21 is &mt RALT L",
+        "Position 22 is &mt RGUI SEMI",
+        "Layer still has exactly 42 bindings"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Add a navigation layer with arrow keys on HJKL and Home/End/PgUp/PgDn on the left hand",
+      "expected_output": "A new layer (index 4) is added with arrow keys and navigation, and a layer-switch key is wired in",
+      "assertions": [
+        "A #define NAV 4 (or similar) is added",
+        "A new layer block exists with LEFT/DOWN/UP/RIGHT on positions 19-22",
+        "HOME/PG_DN/PG_UP/END are placed on the left hand",
+        "An &mo or &tog for the new layer is added to an existing layer",
+        "New layer has exactly 42 bindings",
+        "Existing layers are not broken"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "What does the left thumb cluster do on the base layer?",
+      "expected_output": "Description of the three left thumb keys: right-click, Ctrl/Enter (mod-tap), and momentary layer 1 (NUMBER)",
+      "assertions": [
+        "Position 36 (&mkp RCLK) is identified as right mouse click",
+        "Position 37 (&mt LCTRL RETURN) is identified as Ctrl on hold, Enter on tap",
+        "Position 38 (&mo 1) is identified as momentary NUMBER layer"
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "Add a combo so pressing J+K together types Escape",
+      "expected_output": "A combos node is added with a combo binding for positions 19+20 that outputs ESC",
+      "assertions": [
+        "A combos block exists inside the root / block",
+        "key-positions includes 19 and 20",
+        "bindings is &kp ESC",
+        "timeout-ms is between 25 and 50",
+        "The combo is outside the keymap node",
+        "Existing keymap layers are unchanged"
+      ]
+    }
+  ]
+}
