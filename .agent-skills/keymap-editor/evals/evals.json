@@ -63,6 +63,42 @@
         "The combo is outside the keymap node",
         "Existing keymap layers are unchanged"
       ]
+    },
+    {
+      "id": 6,
+      "prompt": "Help me set up the keymap, I just got this keyboard and I don't know where to start",
+      "expected_output": "Agent enters discovery mode and asks 2-3 profile questions (occupation, OS, keyboard experience) before making any keymap changes",
+      "assertions": [
+        "Agent does NOT edit config/corne_tp.keymap in its first response",
+        "Agent asks about the user's occupation or primary use case",
+        "Agent asks about the user's operating system",
+        "Agent asks about prior split/custom keyboard experience",
+        "No more than 3 questions are asked in the first round"
+      ]
+    },
+    {
+      "id": 7,
+      "prompt": "Recommend a layout for me. I'm a frontend developer on macOS, I use VS Code, I type in Spanish and English, and I have some wrist pain from reaching for Ctrl",
+      "expected_output": "Agent synthesizes the user's profile and proposes a concrete keymap plan with rationale, then asks for confirmation before editing",
+      "assertions": [
+        "Response mentions home row mods or an alternative to reduce pinky/wrist strain for Ctrl",
+        "Response addresses macOS modifier placement (Cmd vs Ctrl)",
+        "Response addresses Spanish accented characters (á é í ó ú ñ)",
+        "Response proposes specific layers or changes as a plan",
+        "Agent asks for user confirmation before making any edits to the keymap file",
+        "config/corne_tp.keymap is NOT modified yet"
+      ]
+    },
+    {
+      "id": 8,
+      "prompt": "What's the best keymap for programming?",
+      "expected_output": "Agent recognizes this as a discovery prompt and asks clarifying questions rather than immediately prescribing a layout",
+      "assertions": [
+        "Agent does NOT immediately edit the keymap",
+        "Agent asks what programming languages or tools the user works with",
+        "Agent asks about the user's editor or IDE",
+        "Response does not assume a single 'best' layout without knowing the user's context"
+      ]
     }
   ]
 }
