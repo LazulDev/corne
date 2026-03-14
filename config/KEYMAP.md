@@ -16,11 +16,11 @@ Letras QWERTY, puntuación básica, modificadores dedicados.
 
 ```
 ╭────────┬────────┬────────┬────────┬────────┬────────╮   ╭────────┬────────┬────────┬────────┬────────┬────────╮
-│ LCTRL  │   Q    │   W    │   E    │   R    │   T    │   │   Y    │   U    │   I    │   O    │   P    │  BSPC  │
+│  TAB   │   Q    │   W    │   E    │   R    │   T    │   │   Y    │   U    │   I    │   O    │   P    │  BSPC  │
 ├────────┼────────┼────────┼────────┼────────┼────────┤   ├────────┼────────┼────────┼────────┼────────┼────────┤
-│  TAB   │   A    │   S    │   D    │   F    │   G    │   │   H    │   J    │   K    │   L    │   ;    │   '    │
+│ LSHIFT │   A    │   S    │   D    │   F    │   G    │   │   H    │   J    │   K    │   L    │   ;    │   '    │
 ├────────┼────────┼────────┼────────┼────────┼────────┤   ├────────┼────────┼────────┼────────┼────────┼────────┤
-│ LSHIFT │   Z    │   X    │   C    │   V    │   B    │   │   N    │   M    │   ,    │   .    │  LALT  │ RSHIFT │
+│ LCTRL  │   Z    │   X    │   C    │   V    │   B    │   │   N    │   M    │   ,    │   .    │  LALT  │ RSHIFT │
 ╰────────┴────────┴────────┼────────┼────────┼────────┤   ├────────┼────────┼────────┼────────┴────────┴────────╯
                             │  RCLK  │  LGUI  │ MO(1)  │   │ MO(2)  │ SPACE  │ RETURN │
                             ╰────────┴────────┴────────╯   ╰────────┴────────┴────────╯
@@ -30,7 +30,7 @@ Letras QWERTY, puntuación básica, modificadores dedicados.
 
 - **LGUI (Cmd)** en pulgar izquierdo central → posición más cómoda para el modificador más usado en macOS (Cmd+C, Cmd+V, Cmd+S, Cmd+Z, Cmd+Tab…). Se combina fácilmente con cualquier letra de la mano izquierda.
 - **LALT (Option)** en pos 34 (anular derecho, fila inferior) → para acentos españoles. Al estar en la mano derecha, permite combinar con las vocales de la mano izquierda (Option+E → vocal) sin contorsiones.
-- **LCTRL** en pos 0 (esquina superior izquierda, estilo Unix) → para atajos de IDE como Ctrl+Space (autocompletado en IntelliJ/WebStorm) y atajos de terminal.
+- **LCTRL** en pos 24 (esquina inferior izquierda, estilo Unix) → para atajos de IDE como Ctrl+Space (autocompletado en IntelliJ/WebStorm) y atajos de terminal.
 - **RCLK** en pulgar izquierdo externo → clic derecho (menú contextual) con la mano izquierda mientras la mano derecha está en el trackpad. El clic izquierdo se hace tocando el propio trackpad (hardware).
 - **ESC** no está en la capa base → se accede desde SYM o NUMAV. Para uso con IDEs (no Vim) es suficiente.
 
@@ -74,11 +74,11 @@ Se activa manteniendo **MO(2)** (pulgar derecho interno).
 
 ```
 ╭────────┬────────┬────────┬────────┬────────┬────────╮   ╭────────┬────────┬────────┬────────┬────────┬────────╮
-│  ESC   │   1    │   2    │   3    │   4    │   5    │   │   6    │   7    │   8    │   9    │   0    │  DEL   │
+│  ESC   │   7    │   8    │   9    │  HOME  │  END   │   │  ___   │   ↑    │  ___   │  ___   │  ___   │  DEL   │
 ├────────┼────────┼────────┼────────┼────────┼────────┤   ├────────┼────────┼────────┼────────┼────────┼────────┤
-│  ___   │  HOME  │ PG_DN  │ PG_UP  │  END   │  ___   │   │  LEFT  │  DOWN  │   UP   │ RIGHT  │  ___   │  ___   │
+│  ___   │   4    │   5    │   6    │ PG_UP  │ PG_DN  │   │   ←    │   ↓    │   →    │  ___   │  ___   │  ___   │
 ├────────┼────────┼────────┼────────┼────────┼────────┤   ├────────┼────────┼────────┼────────┼────────┼────────┤
-│  ___   │  ___   │  ___   │  ___   │  ___   │  ___   │   │  ___   │  ___   │  ___   │  ___   │  ___   │  ___   │
+│   0    │   1    │   2    │   3    │  ___   │  ___   │   │  ___   │  ___   │  ___   │  ___   │  ___   │  ___   │
 ╰────────┴────────┴────────┼────────┼────────┼────────┤   ├────────┼────────┼────────┼────────┴────────┴────────╯
                             │  ___   │  ___   │ MO(3)  │   │ (held) │  ___   │  ___   │
                             ╰────────┴────────┴────────╯   ╰────────┴────────┴────────╯
@@ -86,15 +86,25 @@ Se activa manteniendo **MO(2)** (pulgar derecho interno).
 
 ### Organización
 
-- **Fila superior**: números 1-9, 0.
-- **Home row izquierda**: Home, PgDn, PgUp, End — navegación por documento.
-- **Home row derecha**: ← ↓ ↑ → — flechas.
-- **Combinable con modificadores** (transparentes desde base):
-  - Cmd+← = inicio de línea
-  - Cmd+→ = fin de línea
-  - Option+← = saltar palabra
-  - Shift+→ = seleccionar carácter
-  - Cmd+Shift+→ = seleccionar hasta fin de línea
+**Mano izquierda — numpad:**
+- **Fila 1**: 7 8 9 (cols 1-3) + HOME / END (cols 4-5)
+- **Fila 2**: 4 5 6 (cols 1-3) + PG_UP / PG_DN (cols 4-5)
+- **Fila 3**: 0 1 2 3 (cols 0-3) — el 0 ocupa la esquina del meñique
+
+**Mano derecha — flechas T-invertida (estilo gamer):**
+```
+   ↑
+← ↓ →
+```
+- ↑ en fila 1 col 1, alineado sobre ↓ en fila 2 col 1
+- ← ↓ → en fila 2 cols 0-2
+
+**Combinable con modificadores** (transparentes desde base):
+- Cmd+← = inicio de línea
+- Cmd+→ = fin de línea
+- Option+← = saltar palabra
+- Shift+↓ = seleccionar línea
+- Cmd+Shift+→ = seleccionar hasta fin de línea
 
 ### Acceso a SYS desde NUMAV
 
