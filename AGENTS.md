@@ -28,7 +28,7 @@ config/
     Kconfig.shield                 # Shield selection guards
 .github/workflows/
   build.yml                       # CI: builds firmware via zmkfirmware/zmk build-user-config
-  keymap-img.yml                  # CI: generates keymap visualization PNGs on keymap changes
+  keymap-img.yml                  # CI: generates keymap SVGs via keymap-drawer on keymap changes
 ```
 
 ## Build
@@ -97,7 +97,7 @@ When adding new Kconfig options, prefer the user-level files for personal tweaks
 ## PR / CI Guidelines
 
 - Pushing to `main` or opening a PR triggers the firmware build workflow.
-- Changing any `config/*.keymap` file on a PR also triggers the keymap image generation workflow, which commits visualization PNGs and posts them as a PR comment.
+- Changing any `config/*.keymap` file on `main` (or manually via `workflow_dispatch`) triggers the keymap drawing workflow (`keymap-drawer`), which commits SVG visualizations to the `keymap-drawer/` folder.
 - Ensure the CI build passes (all three artifacts: left, right, settings_reset) before merging.
 
 ## Common Tasks
