@@ -14,21 +14,7 @@ Custom ZMK firmware for a Corne 42-key split keyboard with trackpad.
 
 Check [Keymap documentation](./config/KEYMAP.md) for detailed info.
 
-<picture>
-  <img alt="TODO" src="./assets/imgs/0 base layer.png">
-</picture>
-
-<picture>
-  <img alt="TODO" src="./assets/imgs/1 sym layer.png">
-</picture>
-
-<picture>
-  <img alt="TODO" src="./assets/imgs/2 numav layer.png">
-</picture>
-
-<picture>
-  <img alt="TODO" src="./assets/imgs/3 sys layer.png">
-</picture>
+![Keymap](./assets/imgs/corne_tp.svg)
 
 ## Build
 
