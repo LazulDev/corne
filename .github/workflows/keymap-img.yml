@@ -18,7 +18,7 @@ jobs:
     with:
       keymap_patterns: "config/*.keymap"
       config_path: "keymap_drawer.config.yaml"
-      output_folder: "keymap-drawer"
+      output_folder: "assets/imgs"
       draw_args: "corne_tp:'-k splitkb/aurora/corne/rev1'"
       fail_on_error: true
       debug_mode: true
