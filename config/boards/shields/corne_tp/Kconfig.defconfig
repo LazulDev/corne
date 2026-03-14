@@ -46,5 +46,21 @@ endchoice
 
 endif # LVGL
 
+# BLE — must match on both halves for reliable reconnection after deep sleep
+config BT_CTLR_TX_PWR_PLUS_8
+    default y
+
+config ZMK_BLE_EXPERIMENTAL_CONN
+    default y
+
+# Sleep
+config ZMK_SLEEP
+    default y
+
+config ZMK_IDLE_TIMEOUT
+    default 600000
+
+config ZMK_IDLE_SLEEP_TIMEOUT
+    default 900000
 
 endif
