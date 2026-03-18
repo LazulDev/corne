@@ -53,8 +53,8 @@ layers:
   - HOME
   - END
   - {t: ▽, type: trans}
-  - UP
   - {t: ▽, type: trans}
+  - UP
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - DEL
@@ -64,10 +64,10 @@ layers:
   - '6'
   - PG UP
   - PG DN
+  - {t: ▽, type: trans}
   - LEFT
   - DOWN
   - RIGHT
-  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - '0'
