@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: corne_tp}
 layers:
-  base: [TAB, Q, W, E, R, T, Y, U, I, O, P, BSPC, LSHFT, A, S, D, F, G, H, J, K, L, ;, '''', LCTRL, Z, X, C, V, B, N, M, ',', ., LALT, RSHFT, '&mkp RCLK', LGUI, sym,
-    numav, SPACE, RETURN]
+  base: [TAB, Q, W, E, R, T, Y, U, I, O, P, BSPC, LSHFT, A, S, D, F, G, H, J, K, L, ;, '''', LCTRL, Z, X, C, V, B, N, M, ',', ., LALT, RSHFT, '&mkp RCLK', LGUI, numav,
+    sym, SPACE, RETURN]
   sym:
   - ESC
   - '!'
@@ -41,8 +41,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
   - sys
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   numav:
@@ -84,8 +84,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - sys
   - {type: held}
+  - sys
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   sys:
@@ -93,10 +93,10 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: BT, h: '3'}
-  - {t: BT, h: '2'}
+  - BT CLR ALL
+  - BT CLR
   - {t: ▽, type: trans}
-  - BRI DN
+  - VOL UP
   - BRI UP
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -105,11 +105,11 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: BT, h: '4'}
-  - {t: BT, h: '1'}
+  - {t: ▽, type: trans}
+  - BT NXT
   - MUTE
   - VOL DN
-  - VOL UP
+  - BRI DN
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -117,12 +117,12 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - BT CLR
-  - {t: BT, h: '0'}
   - {t: ▽, type: trans}
-  - PREV
+  - BT PRV
   - PP
+  - PREV
   - NEXT
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
