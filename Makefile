@@ -26,4 +26,4 @@ download:
 # Show build status
 status:
 	@echo "Showing recent builds..."
-	gh run list --workflow=.github/workflows/build.yml --limit 5
+	@gh run list --workflow=.github/workflows/build.yml --limit 5 | cat
