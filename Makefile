@@ -15,6 +15,9 @@ help:
 build:
 	gh workflow run .github/workflows/build.yml
 
+status-image:
+	@echo "Showing last keymap image generation..."
+	@gh run list --workflow=.github/workflows/keymap-img.yml --limit 1 | cat
 
 # Download artifacts from last successful build
 download:
