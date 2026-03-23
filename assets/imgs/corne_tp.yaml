@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: corne_tp}
 layers:
-  base: [ESC, Q, W, E, R, T, Y, U, I, O, P, BSPC, TAB, A, S, D, F, G, H, J, K, L, '~', '''', LSHFT, Z, X, C, V, B, N, M, ',', ., LALT, ENTER, '&mkp LCTRL', LGUI,
-    numav, sym, SPACE, RCTRL]
+  base: [ESC, Q, W, E, R, T, Y, U, I, O, P, BSPC, TAB, A, S, D, F, G, H, J, K, L, '~', '''', LSHFT, Z, X, C, V, B, N, M, '&ht SEMI COMMA', '&ht COLON DOT', LALT,
+    ENTER, '&mkp LCTRL', LGUI, numav, sym, SPACE, RCTRL]
   sym:
   - ESC
   - '&ht PIPE EXCL'
