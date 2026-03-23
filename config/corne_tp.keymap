@@ -68,7 +68,7 @@
             bindings = <
 // ╭───────────┬───────────┬───────────┬───────────┬───────────┬───────────╮   ╭───────────┬───────────┬───────────┬───────────┬───────────┬───────────╮
     &kp ESC    &ht PIPE EXCL &kp AT    &kp HASH    &kp DLLR    &kp PRCNT      &kp CARET   &kp AMPS    &kp STAR    &inv_qmark  &kp QMARK    &kp DEL
-    &trans     &kp LPAR    &kp RPAR    &kp LBRC    &kp RBRC    &kp EQUAL      &kp PLUS    &kp LBKT    &kp RBKT    &kp BSLH    &kp FLSH     &none
+    &trans     &kp LPAR    &kp RPAR    &kp LBRC    &kp RBRC    &kp EQUAL      &kp PLUS    &kp LBKT    &kp RBKT    &kp BSLH    &kp FSLH     &none
     &trans     &kp LT      &kp GT      &inv_excl   &euro       &none          &kp SQT     &kp DQT     &kp MINUS   &kp UNDER   &trans       &trans
 // ╰───────────┴───────────┴───────────┤                                                                           ├───────────┴───────────┴───────────╯
                                          &trans     &trans      &mo SYS         &trans      &trans      &trans
