@@ -1,10 +1,10 @@
 layout: {zmk_keyboard: corne_tp}
 layers:
-  base: [TAB, Q, W, E, R, T, Y, U, I, O, P, BSPC, LSHFT, A, S, D, F, G, H, J, K, L, ;, '''', LCTRL, Z, X, C, V, B, N, M, ',', ., LALT, RSHFT, '&mkp RCLK', LGUI, numav,
-    sym, SPACE, RETURN]
+  base: [ESC, Q, W, E, R, T, Y, U, I, O, P, BSPC, TAB, A, S, D, F, G, H, J, K, L, '~', '''', LSHFT, Z, X, C, V, B, N, M, ',', ., LALT, ENTER, '&mkp LCTRL', LGUI,
+    numav, sym, SPACE, RCTRL]
   sym:
   - ESC
-  - '!'
+  - '&ht PIPE EXCL'
   - '@'
   - '#'
   - $
@@ -12,31 +12,31 @@ layers:
   - ^
   - '&'
   - '*'
-  - '-'
-  - +
+  - '&inv_qmark'
+  - '?'
   - DEL
-  - '`'
+  - {t: ▽, type: trans}
   - (
   - )
   - '{'
   - '}'
   - '='
-  - _
+  - +
   - '['
   - ']'
+  - \
+  - FLSH
+  - ''
+  - {t: ▽, type: trans}
   - <
   - '>'
-  - '~'
-  - {t: ▽, type: trans}
-  - \
-  - '|'
-  - /
-  - '?'
-  - ':'
-  - ;
-  - '"'
-  - '&inv_qmark'
   - '&inv_excl'
+  - '&euro'
+  - ''
+  - ''''
+  - '"'
+  - '-'
+  - _
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -52,11 +52,11 @@ layers:
   - '9'
   - HOME
   - END
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - ''
+  - ''
   - UP
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - ''
+  - ''
   - DEL
   - {t: ▽, type: trans}
   - '4'
@@ -64,22 +64,22 @@ layers:
   - '6'
   - PG UP
   - PG DN
-  - {t: ▽, type: trans}
+  - ''
   - LEFT
   - DOWN
   - RIGHT
+  - ''
+  - ''
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - '0'
   - '1'
   - '2'
   - '3'
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - '0'
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -90,44 +90,44 @@ layers:
   - {t: ▽, type: trans}
   sys:
   - OUT TOG
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - BT CLR ALL
+  - ''
+  - ''
+  - ''
   - BT CLR
-  - {t: ▽, type: trans}
   - VOL UP
   - BRI UP
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - ''
+  - ''
+  - ''
   - '&soft_off'
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
   - BT NXT
   - MUTE
   - VOL DN
   - BRI DN
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
   - BT PRV
   - PP
   - PREV
   - NEXT
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
   - {type: held}
   - {type: held}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - ''
+  - ''
