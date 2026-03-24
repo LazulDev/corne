@@ -81,13 +81,6 @@
     };
 
     behaviors {
-        dk_acut: dead_key_acut {
-            compatible = "zmk,behavior-dead-key";
-            #binding-cells = <1>;
-            bindings = <&kp MAC_ACUT>;
-            mods = <(MOD_LALT)>;
-        };
-
         ht: hold_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "HOLD_TAP";
