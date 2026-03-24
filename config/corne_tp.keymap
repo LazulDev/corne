@@ -98,9 +98,10 @@
         base_layer {
             bindings = <
 // ╭───────────┬───────────┬───────────┬───────────┬───────────┬───────────╮   ╭───────────┬───────────┬───────────┬───────────┬───────────┬───────────╮
-    &kp ESC     &kp Q       &kp W       &kp E       &kp R       &kp T          &kp Y       &kp U       &kp I       &kp O       &kp P       &kp BSPC
-    &kp TAB     &kp A       &kp S       &kp D       &kp F       &kp G          &kp H       &kp J       &kp K       &kp L       &ntilde     &acut
-    &kp LSHFT   &kp Z       &kp X       &kp C       &kp V       &kp B          &kp N       &kp M       &ht SEMI COMMA &ht COLON DOT &kp CAPS &kp LALT
+    &kp TAB    &kp Q       &kp W       &kp E       &kp R       &kp T          &kp Y       &kp U       &kp I       &kp O       &kp P       &kp BSPC
+    &kp CAPS   &kp A       &kp S       &kp D       &kp F       &kp G          &kp H       &kp J       &kp K       &kp L       &ntilde     &acut
+    &kp LSHFT  &kp Z       &kp X       &kp C       &kp V       &kp B          &kp N       &kp M       &ht SEMI COMMA &ht COLON DOT &kp LALT &kp ESC
+//                                                                                                                                  ^^^^ Option en macOS
 // ╰───────────┴───────────┴───────────┤                                                                           ├───────────┴───────────┴───────────╯
                                          &kp LCTRL &kp LGUI    &mo NUMAV       &mo SYM     &kp SPACE   &kp ENTER
 //                                      ╰───────────┴───────────┴───────────╯   ╰───────────┴───────────┴───────────╯
@@ -110,7 +111,7 @@
         sym_layer {
             bindings = <
 // ╭───────────┬───────────┬───────────┬───────────┬───────────┬───────────╮   ╭───────────┬───────────┬───────────┬───────────┬───────────┬───────────╮
-    &kp ESC    &ht PIPE EXCL &kp AT    &kp HASH    &kp DLLR    &kp PRCNT       &kp CARET   &kp AMPS    &kp STAR    &inv_qmark  &kp QMARK    &kp DEL
+    &trans    &ht PIPE EXCL &kp AT    &kp HASH    &kp DLLR    &kp PRCNT       &kp CARET   &kp AMPS    &kp STAR    &inv_qmark  &kp QMARK    &kp DEL
     &trans     &kp LPAR    &kp RPAR    &kp LBRC    &kp RBRC    &kp EQUAL       &kp PLUS    &kp LBKT    &kp RBKT    &kp BSLH    &kp FSLH     &none
     &trans     &kp LT      &kp GT      &inv_excl   &euro       &kp GRAVE       &kp SQT     &kp DQT     &kp MINUS   &kp UNDER   &ntilde_caps &trans
 // ╰───────────┴───────────┴───────────┤                                                                           ├───────────┴───────────┴───────────╯
@@ -122,9 +123,9 @@
         numav_layer {
             bindings = <
 // ╭───────────┬───────────┬───────────┬───────────┬───────────┬───────────╮   ╭───────────┬───────────┬───────────┬───────────┬───────────┬───────────╮
-    &kp ESC     &kp N7      &kp N8      &kp N9      &kp HOME    &kp END        &none       &none       &kp UP      &none       &none       &kp DEL
+    &trans      &kp N7      &kp N8      &kp N9      &kp HOME    &kp END        &none       &none       &kp UP      &none       &none       &kp DEL
     &trans      &kp N4      &kp N5      &kp N6      &kp PG_UP   &kp PG_DN      &none       &kp LEFT    &kp DOWN    &kp RIGHT   &none       &none
-    &trans      &kp N1      &kp N2      &kp N3      &kp N0      &none          &none       &none       &none       &none       &none      &trans
+    &trans      &kp N1      &kp N2      &kp N3      &kp N0      &none          &none       &none       &none       &none       &none       &trans
 // ╰───────────┴───────────┴───────────┤                                                                           ├───────────┴───────────┴───────────╯
                                          &trans     &trans     &trans           &mo SYS     &trans      &trans
 //                                      ╰───────────┴───────────┴───────────╯   ╰───────────┴───────────┴───────────╯
