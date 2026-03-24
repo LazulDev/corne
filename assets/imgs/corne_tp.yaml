@@ -136,9 +136,9 @@ layers:
   - ''
   - ''
   - BT CLR
-  - VOL UP
-  - BRI UP
   - ''
+  - BRI DN
+  - BRI UP
   - ''
   - ''
   - '&soft_off'
@@ -150,7 +150,7 @@ layers:
   - BT NXT
   - MUTE
   - VOL DN
-  - BRI DN
+  - VOL UP
   - ''
   - ''
   - ''
