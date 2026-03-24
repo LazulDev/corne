@@ -2,11 +2,11 @@
 
 Layout diseñado para **macOS**, programación en **Kotlin/TypeScript/Angular** (IntelliJ + WebStorm), escritura frecuente en **español**, y uso del **trackpad integrado** en la mitad derecha.
 
-**Sin hold-tap.** Todas las teclas hacen una sola cosa.
+Este keymap utiliza comportamientos avanzados de ZMK como **macros** y **hold-tap** para maximizar la eficiencia tanto en programación como en escritura en español.
 
 ## Requisito previo en macOS
 
-Configurar el input source a **"U.S."** o **"ABC Extended"** en System Settings → Keyboard → Input Sources. Esto permite usar los acentos españoles con Option+key (ver sección de acentos más abajo).
+Configurar el input source a **"ABC Extended"** en `System Settings → Keyboard → Input Sources`. **Este paso es crucial**; si se utiliza otra distribución (como "Spanish" o "U.S." estándar), los símbolos de programación (`{}[]|\`) y los acentos no funcionarán como se espera.
 
 ---
 
@@ -25,10 +25,10 @@ Letras QWERTY, puntuación básica, modificadores dedicados.
 ### Por qué cada tecla está donde está
 
 - **LGUI (Cmd)** en pulgar izquierdo central → posición más cómoda para el modificador más usado en macOS (Cmd+C, Cmd+V, Cmd+S, Cmd+Z, Cmd+Tab…). Se combina fácilmente con cualquier letra de la mano izquierda.
-- **LALT (Option)** en pos 34 (anular derecho, fila inferior) → para acentos españoles. Al estar en la mano derecha, permite combinar con las vocales de la mano izquierda (Option+E → vocal) sin contorsiones.
-- **LCTRL** en pos 24 (esquina inferior izquierda, estilo Unix) → para atajos de IDE como Ctrl+Space (autocompletado en IntelliJ/WebStorm) y atajos de terminal.
-- **RCLK** en pulgar izquierdo externo → clic derecho (menú contextual) con la mano izquierda mientras la mano derecha está en el trackpad. El clic izquierdo se hace tocando el propio trackpad (hardware).
-- **ESC** no está en la capa base → se accede desde SYM o NUMAV. Para uso con IDEs (no Vim) es suficiente.
+- **LCTRL & LGUI** en el clúster del pulgar izquierdo → Acceso rápido a los modificadores más comunes.
+    - **Acento (ACUT)** como tecla muerta en la fila de inicio derecha → Permite una escritura de tildes natural e intuitiva, similar a un teclado español estándar.
+    - **Hold-Taps** para puntuación en la fila inferior derecha → `&ht SEMI COMMA` (tap para `;`, hold para `,`) y `&ht COLON DOT` (tap para `:`, hold para `.`) optimizan el acceso a símbolos comunes.
+    - **Macros para español**: Teclas dedicadas para `ñ`, `¿` y `¡` simplifican la escritura.
 
 ---
 
@@ -100,16 +100,27 @@ Se accede desde SYM o NUMAV manteniendo **MO(3)**.
 
 ---
 
-## Acentos en español
+## Escritura en Español
 
-Con macOS configurado en layout **"U.S."** o **"ABC Extended"**:
+El teclado está optimizado para escribir en español de forma fluida y natural.
+
+### Acentos con Tecla Muerta
+
+Se utiliza una **tecla muerta (dead key)** para los acentos agudos mediante `Option+E`, imitando el comportamiento estándar de macOS.
+
+1.  Pulsa la tecla de acento agudo (posición 35, meñique derecho en la home row de la capa base) — envía `Option+E`.
+2.  A continuación, pulsa la vocal que deseas acentuar (a, e, i, o, u).
+
+El resultado será la vocal acentuada (á, é, í, ó, ú).
+
+### Caracteres y Símbolos Españoles
 
 | Carácter | Cómo teclearlo |
 |----------|---------------|
-| á é í ó ú | Mantén **LALT** (pos 34) + pulsa **E** → suelta ambas → pulsa la **vocal** |
-| ñ | Mantén **LALT** + pulsa **N** → suelta ambas → pulsa **N** |
-| ¿ | Mantén **MO(1)** → pulsa la tecla **¿** (pos 32 en SYM, macro automática) |
-| ¡ | Mantén **MO(1)** → pulsa la tecla **¡** (pos 33 en SYM, macro automática) |
+| ñ | Tecla dedicada en la capa **BASE** (posición 34, anular derecho). |
+| ¿ | Tecla dedicada en la capa **SYM** (macro `&inv_qmark`). |
+| ¡ | Tecla dedicada en la capa **SYM** (macro `&inv_excl`). |
+| € | Tecla dedicada en la capa **SYM** (macro `&euro`). |
 
 ---
 
@@ -124,13 +135,13 @@ En ambos casos se necesitan dos pulgares: uno mantiene la capa intermedia y el o
 
 ---
 
-## Resumen de pulgares
+## Resumen de pulgares (Capa Base)
 
 ```
-Pulgar izq externo (36):  RCLK      — clic derecho para trackpad
-Pulgar izq central (37):  LGUI      — Cmd (el modificador más usado en macOS)
-Pulgar izq interno (38):  MO(1)     — activa SYM mientras se mantiene
-Pulgar der interno (39):  MO(2)     — activa NUMAV mientras se mantiene
-Pulgar der central (40):  SPACE     — espacio
-Pulgar der externo (41):  RETURN    — enter
+Pulgar izq externo (36):  LCTRL     — Control
+Pulgar izq central (37):  LGUI      — Cmd (macOS)
+Pulgar izq interno (38):  MO(NUMAV) — activa la capa NUMAV mientras se mantiene
+Pulgar der interno (39):  MO(SYM)   — activa la capa SYM mientras se mantiene
+Pulgar der central (40):  SPACE     — Espacio
+Pulgar der externo (41):  ENTER     — Enter/Return
 ```
