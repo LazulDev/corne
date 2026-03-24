@@ -106,9 +106,9 @@ El teclado está optimizado para escribir en español de forma fluida y natural.
 
 ### Acentos con Tecla Muerta
 
-Se utiliza una **tecla muerta (dead key)** para los acentos agudos mediante `Option+E`, imitando el comportamiento estándar de macOS.
+Se utiliza una **tecla muerta (dead key)** para los acentos agudos mediante un macro que envía `Option+E`, imitando el comportamiento estándar de macOS.
 
-1.  Pulsa la tecla de acento agudo (posición 35, meñique derecho en la home row de la capa base) — envía `Option+E`.
+1.  Pulsa la tecla de acento agudo (posición 35, meñique derecho en la home row de la capa base) — macro `&acut` que envía `Option+E`.
 2.  A continuación, pulsa la vocal que deseas acentuar (a, e, i, o, u).
 
 El resultado será la vocal acentuada (á, é, í, ó, ú).
