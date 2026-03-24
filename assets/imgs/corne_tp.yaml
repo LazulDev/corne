@@ -24,7 +24,7 @@ layers:
   - K
   - L
   - '&ntilde'
-  - Alt+E
+  - '&acut'
   - LSHFT
   - Z
   - X
@@ -35,8 +35,8 @@ layers:
   - M
   - {t: ',', h: ;}
   - {t: ., h: ':'}
-  - LALT
   - CAPS
+  - LALT
   - LCTRL
   - LGUI
   - numav
@@ -73,12 +73,12 @@ layers:
   - '>'
   - '&inv_excl'
   - '&euro'
-  - '&ntilde_caps'
+  - '`'
   - ''''
   - '"'
   - '-'
   - _
-  - {t: ▽, type: trans}
+  - '&ntilde_caps'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -121,7 +121,7 @@ layers:
   - ''
   - ''
   - ''
-  - {t: ▽, type: trans}
+  - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
