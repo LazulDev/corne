@@ -10,6 +10,7 @@ help:
 	@echo "  build        - Trigger GitHub Actions build workflow"
 	@echo "  download     - Download artifacts from last successful build"
 	@echo "  status       - Show recent build status"
+	@echo "  status-image - Show last keymap image generation status"
 	@echo "  help         - Show this help message"
 
 build:
